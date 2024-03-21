@@ -1,0 +1,193 @@
+:root {
+  --primary-color: #202020;
+  --secondary-color: #f4f7fc;
+  --grey-color: #a6a6a6;
+}
+/* 1rem ==16px if you want convert 96px into rem then do 96/16 */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: sans-serif;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin: 1.6rem 0;
+}
+p {
+  font-weight: 400;
+  margin: 1.6rem 0;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  /* line-height: 1.5%; */
+}
+h1 {
+  font-size: 4rem;
+}
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+h2 {
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+}
+h3 {
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+}
+h4 {
+  font-size: 1.6rem;
+}
+span {
+  color: var(--grey-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  margin: 1.6rem;
+  color: var(--grey-color);
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+.site-conatiner {
+  width: 80%;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+hr {
+  margin: 16px 0;
+}
+/* ---navigation --- */
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .menu a {
+  border-bottom: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-left: 24px;
+}
+.mobile-menu {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+    font-size: 24px;
+  }
+  .menu {
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    top: 100%;
+    z-index: 99;
+    display: none;
+  }
+  .menu a {
+    padding: 32px 0;
+    font-size: 18px;
+    display: block;
+  }
+  .show {
+    display: block;
+  }
+}
+/* ----hero section--- */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  position: relative;
+}
+.hero .left {
+  background-image: url("https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  background-position: center;
+}
+.hero .right {
+  background-image: url("https://images.pexels.com/photos/9064206/pexels-photo-9064206.jpeg?auto=compress&cs=tinysrgb&w=600");
+}
+.hero .content-box {
+  position: absolute;
+  background-color: #fffffc;
+  padding: 32px;
+  width: 35%;
+  top: 50%;
+  left: 65%;
+  transform: translate(-40%, -50%);
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero .content-box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+}
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 50px;
+  grid-gap: 50px;
+}
+.blog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 48px;
+}
+.blog .thumbnail {
+  object-fit: contain;
+}
+.blog-post {
+  background-color: var(--secondary-color);
+  margin: 24px;
+  padding: 16px;
+}
+.blog-content {
+  margin-top: 24px;
+}
+.pagination {
+  display: inline-block;
+}
+.pagination .active {
+  border: 1px solid var(--primary-color);
+  background-color: var(--secondary-color);
+}
+.pagination a {
+  color: var(--primary-color);
+  float: left;
+  padding: 8px 16px;
+  border: 0;
+}
+/* -- */
+@media only screen and (max-width: 768px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+}
