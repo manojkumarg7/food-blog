@@ -109,7 +109,7 @@ nav .menu a {
   }
   .menu {
     position: absolute;
-    background-color: red;
+    background-color: gray;
     width: 100%;
     top: 100%;
     z-index: 99;
@@ -131,14 +131,14 @@ nav .menu a {
   position: relative;
 }
 .hero .left {
-  background-image: url("https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: url("./images/banner.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 60vh;
   background-position: center;
 }
 .hero .right {
-  background-image: url("https://images.pexels.com/photos/9064206/pexels-photo-9064206.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-image: url("./images/side-images.webp");
 }
 .hero .content-box {
   position: absolute;
